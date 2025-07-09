@@ -22,8 +22,8 @@
             <nav>
                 <ul>
                     <li><a href="">Inicio</a></li>
-                    <li><a href="">Acerca</a></li>
-                    <li><a href="">Servicios</a></li>
+                    <li><a href="#sobre-nosotros">Acerca</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
                     <li><a href="">Menu</a></li>
                     <li><a href="">Contactos</a></li>
                 </ul>
@@ -74,7 +74,7 @@
     </section>
 
     <!-- Acerca -->
-    <section class="background-dark-1 section-about">
+    <section id="sobre-nosotros" class="background-dark-1 section-about">
         <div class="container">
             <div class="container-images">
                 <img src="./images/bg-about-us.jpg" alt="about us" class="main-image">
@@ -116,7 +116,7 @@
     </section>
 
     <!-- Platos principales -->
-    <section class="background-dark-2 section-main-dishes">
+    <section id="servicios" class="background-dark-2 section-main-dishes">
         <div class="container">
             <div class="content">
                 <span class="badge">
@@ -823,7 +823,85 @@
                     </div>
                 </div>
             </div>
-        </section>         
+        </section>      
+        
+        <!--  Booking Table-->
+          <section class="background-dark-2 section-booking-table">
+            <div class="container">
+                <div class="content">
+                    <span class="badge">Reserva una mesa</span>
+                    <h2 class="title">Reserva ahora tu mesa y disfruta de una <span>gran experiencia</span></h2>
+
+                    <div class="schedules">
+                        <h3>Horario de atención</h3>
+                        <p>Lunes a Jueves: 10:00 AM - 09:00 PM</p>
+                        <p>iernes y Sábados: 09:00 AM - 10:00 PM</p>
+                        <p>Domingos - Cerrado</p>
+                    </div>
+                </div>
+
+                <!-- Spacer -->
+                 <div class="spacer"></div>
+
+                 <!--  Formulario-->
+                   <form class="contact-form">
+                        <div class="group-form">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" id="name" required placeholder="Alexis Bacik">
+                        </div>
+
+                        <div class="row">
+                            <div class="group-form">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" name="email" id="email" required placeholder="alexis@ejemplo.com">
+                            </div>
+                            <div class="group-form">
+                                <label for="phone">Número de teléfono</label>
+                                <input type="tel" name="phone" id="phone" required placeholder="+123 456 789">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                             <div class="group-form">
+                                <label for="date">Fecha</label>
+                                <input type="date" name="date" id="date" required>
+                            </div>
+                            <div class="group-form">
+                                <label for="time">Hora</label>
+                                <select name="time" id="time">
+                                    <option value="" disabled selected>Selecciona una hora</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">01:00 PM</option>
+                                    <option value="14:00">02:00 PM</option>
+                                    <option value="15:00">03:00 PM</option>
+                                    <option value="16:00">04:00 PM</option>
+                                    <option value="17:00">05:00 PM</option>
+                                    <option value="18:00">06:00 PM</option>
+                                    <option value="19:00">07:00 PM</option>
+                                    <option value="20:00">08:00 PM</option>
+                                    <option value="21:00">09:00 PM</option>
+                                </select>
+                            </div>
+
+                            <div class="group-form">
+                                <label for="number-person">Número de personas</label>
+                                <select name="number-person" id="number-person">
+                                    <option value="" disabled selected>Numero de personas</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit">Reservar ahora</button>
+                   </form>
+            </div>
+          </section>
     <script src="./js/partials.js"></script>
     <script src="./js/home.js"></script>
     <script src="./js/testimonial.js"></script>

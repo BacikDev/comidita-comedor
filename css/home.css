@@ -1323,3 +1323,156 @@
         }
     }
 }
+
+.section-booking-table{
+    & > div{
+        display: flex;
+        align-items: center;
+        position: relative;
+        gap: 80px;
+    }
+
+    .content{
+        flex: 1;
+
+        .schedules{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            margin-top: 40px;
+
+            h3{
+                color: var(--color-light);
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .spacer{
+        flex: 1;
+    }
+
+    .contact-form{
+        background-color: var(--color-light);
+        height: 500px;
+        width: 50%;
+        border-radius: 15px;
+        padding: 60px 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        .group-form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            input{
+                padding: 15px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                font-weight: 400;
+                font-size: 14px;
+                color: var(--text-color);
+                transition: all .3s;
+
+                &:focus{
+                    outline: none;
+                }
+
+                &::placeholder{
+                    color: var(--text-color);
+                }
+            }
+
+            select {
+                padding: 15px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                font-weight: 400;
+                font-size: 14px;
+                color: var(--text-color);
+                transition: all .3s;
+                width: 100%;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+
+        }
+
+        .row{
+            display: flex;
+            gap: 20px;
+
+            .group-form{
+                flex: 1;
+            }
+        }
+
+        button{
+            border: none;
+            background-color: var(--color-primary);
+            color: var(--color-light);
+            font-weight: 700;
+            padding: 20px;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 30px;
+
+            &:hover{
+                background-color: var(--dark-color-divider);
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        & > div{
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .spacer{
+            height: 400px;
+            flex: auto;
+            width: 100%;
+        }
+
+        .contact-form{
+            width: 100%;
+            top: 45%;
+            right: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        & > div{
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .spacer{
+            height: 700px;
+            flex: auto;
+            width: 100%;
+        }
+
+        .contact-form{
+            height: auto;
+            padding: 30px 20px;
+            top: 35%;
+
+            .row{
+                flex-direction: column;
+            }
+        }
+    }
+}
